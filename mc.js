@@ -1,4 +1,6 @@
-//const mailchimp = require('mailchimp')
+
+
+
 
 const mailchimp = require('@mailchimp/mailchimp_marketing');
 
@@ -7,9 +9,9 @@ mailchimp.setConfig({
   server: "us2",
 });
 
-async function run() {
-  const response = await mailchimp.ping.get();
+const run = async () => {
+  const response = await mailchimp.lists.getAllLists();
   console.log(response);
-}
+};
 
 run();

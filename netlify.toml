@@ -1,4 +1,7 @@
 [build]
     #publish = 'dist'
-    functions = 'functions'
-    command = "cd ./functions/ && npm install && cd ../../ && npm run generate"
+    functions = 'lambda'
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

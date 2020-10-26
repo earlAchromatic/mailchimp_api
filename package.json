@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "netlify-lambda install"
+    "postinstall": "netlify-lambda install",
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions"
   },
   "keywords": [],
   "author": "",
