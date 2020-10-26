@@ -1,17 +1,17 @@
 {
-  "name": "mailjet_api",
+  "name": "mailchimp_api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lambda-serve": "netlify-lambda serve functions -c webpack.config.js",
-    "lambda-build": "netlify-lambda build functions -c webpack.config.js"
+    "postinstall": "netlify-lambda install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.22",
+    "base-64": "^1.0.0",
     "netlify-lambda": "^2.0.1",
     "node-fetch": "^2.6.1",
     "node-mailjet": "^3.3.1"
