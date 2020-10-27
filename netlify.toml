@@ -1,7 +1,7 @@
 [build]
     #publish = 'dist'
     functions = 'functions'
-    command = 'npm run build'
+    command = 'npm install'
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
