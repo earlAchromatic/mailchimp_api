@@ -1,8 +1,9 @@
 
+const fetch = require('node-fetch');
+const base64 = require('base-64');
+// import fetch from 'node-fetch';
+// import { encode } from 'base-64';
 
-import fetch from 'node-fetch';
-//import { encode } from 'base-64'
-const base64 = require('base-64')
 
 // const MC_url = 'https://server.api.mailchimp.com/3.0'
 //  const MC_API = '7833d0810f0c5f1d16f9267e35d8a318-us2'
@@ -12,7 +13,7 @@ const base64 = require('base-64')
 //const client = require("@mailchimp/mailchimp_marketing");
 
 
-export async function handler(event){
+exports.handler = async (event) =>{
 
   // Only allow POST
   if (event.httpMethod !== 'POST') { 
@@ -44,7 +45,7 @@ export async function handler(event){
       headers: { 
         Accept: '*/*', 
         'Content-Type': 'application/json', 
-        Authorization: `Basic ${encode(credentials)}`},
+        Authorization: `Basic ${base64.encode(credentials)}`},
         body: JSON.stringify(subscriber)
     });
 
