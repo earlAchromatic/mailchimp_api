@@ -19,7 +19,7 @@ exports.handler = async (event) =>{
   };
 
   try{
-    const {email} = JSON.parse(event.body).payload.email;
+    const {email} = JSON.parse(event.body);
 
     if(!email){
       console.log(email)
