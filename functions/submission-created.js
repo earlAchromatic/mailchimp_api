@@ -22,6 +22,7 @@ exports.handler = async (event) =>{
     const {email} = JSON.parse(event.body);
 
     if(!email){
+      console.log(email)
       return errorGen('Missing Email')
     }
 
