@@ -5,14 +5,6 @@ const base64 = require('base-64');
 // import { encode } from 'base-64';
 
 
-// const MC_url = 'https://server.api.mailchimp.com/3.0'
-//  const MC_API = '7833d0810f0c5f1d16f9267e35d8a318-us2'
-//  const MC_SERVER = 'us2'
-//  const LIST_ID = '3e38748fa4'
-//const getList = `/lists/${Audience_ID}`
-//const client = require("@mailchimp/mailchimp_marketing");
-
-
 exports.handler = async (event) =>{
 
   // Only allow POST
