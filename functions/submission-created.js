@@ -9,10 +9,12 @@ exports.handler = async (event) =>{
 
   // Only allow POST
   if (event.httpMethod !== 'POST') { 
+    console.log(`statusCode: 405, body: Method Not Allowed`)
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
   const errorGen = msg => {
+    console.log(`statusCode: 500, body: ${msg}`)
     return { statusCode: 500, body: msg }; 
   };
 
@@ -44,6 +46,7 @@ exports.handler = async (event) =>{
     const data = await response.json();
 
     if (!response.ok){
+      console.log(`statusCode: ${data.status}, body: ${data.detail}`)
       return {statusCode: data.status, body: data.detail}
     }
 
