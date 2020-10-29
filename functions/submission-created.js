@@ -19,12 +19,12 @@ exports.handler = async (event) =>{
   };
 
   try{
-    const {email} = JSON.parse(event.body);
+    const {email} = JSON.parse(event.body).payload;
 
     if(!email){
       console.log(email)
       return errorGen('Missing Email')
-    }''
+    }
 
     const subscriber = {
       email_address: email,
